@@ -1,0 +1,27 @@
+{
+    "name": "myxland/think-sms",
+    "description": "Thinkphp 5.1 SMS Library, base on overtrue/easy-sms",
+    "type": "think-extend",
+    "license": "Apache-2.0",
+    "version": "1.0",
+    "authors": [
+        {
+            "name": "HWJ",
+            "email": "myxland@gmail.com"
+        }
+    ],
+    "require": {
+        "overtrue/easy-sms": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "myxland\\sms\\": "src/"
+        },
+        "files": [
+            "src/helper.php"
+        ]
+    },
+    "post-install-cmd": [
+        "myxland\\sms\\ComposerScripts::sendConfig"
+    ]
+}
