@@ -14,7 +14,7 @@ class Sms
     public static function app()
     {
         if (! isset(self::$sms)) {
-            $config = config('sms');
+            $config = config('sms.');
             if (! $config) {
                 throw new \InvalidArgumentException("missing sms config");
             }
